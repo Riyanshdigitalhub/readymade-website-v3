@@ -513,19 +513,19 @@
     }
 
     .strip-item {
-      color: #EAF4F1;
-      text-align: center;
-      font-size: 13.5px;
-      font-weight: 500;
-    }
+  color: #EAF4F1;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 500;
+}
 
     .strip-item b {
-      display: block;
-      font-family: 'Sora', sans-serif;
-      font-size: 15px;
-      margin-bottom: 2px;
-      color: #fff;
-    }
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: #fff;
+}
 
     .strip.light {
       background: var(--bg-soft);
@@ -1642,7 +1642,7 @@ font-size:40px;
     @media(max-width:860px) {
       :root {
         --section-pad: 56px;
-      }
+        }
 
       .hero-grid {
         grid-template-columns: 1fr;
@@ -1742,8 +1742,23 @@ font-size:40px;
         padding: 40px 20px;
         margin: 0 12px;
       }
-    }
+      /* ===== Mobile Mid CTA Fix ===== */
 
+.mid-cta{
+    padding:36px 22px;
+    border-radius:18px;
+}
+
+.mid-cta .btn{
+    width:100%;
+    max-width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+}
+    }
+    
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -1914,7 +1929,7 @@ font-size:40px;
     white-space:normal;
 }
     }
-    
+
 /* ===========================
    BUY WITH CONFIDENCE
 =========================== */
