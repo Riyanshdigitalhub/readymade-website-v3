@@ -2011,15 +2011,21 @@ font-size:40px;
 .confidence-grid{
     grid-template-columns:repeat(2,1fr);
 }
-.trust-final{
-    gap:8px 10px;
-}
+ .trust-final{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:8px 10px;
+        margin-top:18px;
+    }
 
-.trust-final span{
-    flex:0 0 calc(50% - 18px);
-    min-width:auto;
-    justify-content:center;
-}
+    .trust-final span{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-width:0;
+        white-space:nowrap;
+    }
+
 }
 
 @media (max-width:640px){
