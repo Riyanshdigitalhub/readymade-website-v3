@@ -243,6 +243,11 @@
       font-size: 13px;
       text-align: center;
       padding: 9px 16px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 60;
     }
 
     .topbar b {
@@ -255,6 +260,11 @@
       position: sticky;
       top: 0;
       z-index: 50;
+    }
+
+    /* ensure page content is not hidden behind the fixed topbar */
+    body {
+      padding-top: 48px;
     }
 
     .headerbar {
@@ -2058,14 +2068,14 @@ font-size:40px;
 
 <body>
 
-  <div class="topbar">&#128293; Launch week pricing &mdash; Limited slots at &#8377;2,999</div>
+  <div class="topbar">Raksha Bandhan Sale — Get &#8377;800 OFF. Use Code RAKSHA800</div>
 
   <header>
     <div class="headerbar">
       <img src="https://riyanshdigitalhub.com/wp-content/uploads/2024/11/website-header-logo-v2.png"
         alt="Riyansh Digital Hub logo" loading="eager">
-      <a href="#checkout"
-        class="btn small">Get Instant Access</a>
+      <a href="https://riyanshdigitalhub.com/?buy_now=1"
+        class="btn small" onclick="trackInitiateCheckout()">Get Instant Access</a>
     </div>
   </header>
 
@@ -2088,12 +2098,13 @@ font-size:40px;
 Launch a complete digital business with a premium WordPress website, WooCommerce setup, 500+ ready-to-sell digital products, premium plugins, commercial rights, and lifetime access &mdash; everything you need to start selling online without coding.
 </p>
         <div class="price-row">
-          <span class="now">&#8377;2,999</span><span class="was">&#8377;50,000+</span><span class="tag">One-time
+          <span class="now">&#8377;2,199</span><span class="was">&#8377;50,000+</span><span class="tag">One-time
             payment</span>
         </div>
+        <p style="margin-top:8px;margin-bottom:0;">&#8377;2,999 — &#8377;800 OFF with code RAKSHA800 — Final payable: &#8377;2,199</p>
         <div class="hero-ctas">
-          <a href="#checkout"
-            class="btn">Get Instant Access &#8594;</a>
+          <a href="https://riyanshdigitalhub.com/?buy_now=1"
+            class="btn" onclick="trackInitiateCheckout()">Get Instant Access &#8594;</a>
           <a href="#demo" class="btn ghost">Watch 2-min demo</a>
         </div>
         <div class="trust-mini" style="justify-content:flex-start;">
@@ -2122,6 +2133,42 @@ Launch a complete digital business with a premium WordPress website, WooCommerce
     </div>
   </section>
 
+  <!-- Raksha Bandhan Special Offer -->
+  <section style="background:var(--teal-deep);color:#fff;">
+    <div class="wrap reveal" style="max-width:980px;">
+      <div class="price-card" style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:20px;border-radius:10px;">
+        <div class="sec-head">
+          <div class="eyebrow" style="color:var(--gold);">RAKSHA BANDHAN SPECIAL OFFER</div>
+          <h2 style="color:#fff;margin-top:6px;margin-bottom:6px;">Launch Your Digital Business for &#8377;2,199</h2>
+          <p style="color:#fff;margin-top:0;margin-bottom:12px;">Raksha Bandhan special &mdash; get &#8377;800 OFF the ReadyMade Website Business Kit.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+          <div style="min-width:220px;">
+            <div style="color:#fff;opacity:0.9;margin-bottom:6px;">Original price: <span style="text-decoration:line-through;">&#8377;2,999</span></div>
+            <div style="font-size:34px;font-weight:800;color:#fff;margin-bottom:6px;">&#8377;2,199</div>
+            <div style="color:#fff;margin-bottom:8px;">Use Code <span style="background:#fff;color:var(--teal-deep);padding:4px 8px;border-radius:4px;font-weight:700;">RAKSHA800</span></div>
+            <div style="color:#fff;font-size:14px;opacity:0.95;margin-bottom:8px;">One-time payment &middot; Lifetime access &middot; No recurring fees</div>
+          </div>
+          <div style="flex:1 1 340px;">
+            <a href="https://riyanshdigitalhub.com/?buy_now=1" class="btn" onclick="trackInitiateCheckout()" style="display:inline-block;padding:12px 18px;font-size:16px;">Get Instant Access</a>
+            <div style="margin-top:12px;">
+              <ul class="checkout-list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin:0;padding:0;list-style:none;color:#fff;font-size:14px;">
+                <li>&#10003; ReadyMade WordPress Website</li>
+                <li>&#10003; WooCommerce Setup</li>
+                <li>&#10003; 500+ Ready-to-Sell Digital Products</li>
+                <li>&#10003; Premium Theme &amp; Plugins</li>
+                <li>&#10003; Commercial Usage Rights</li>
+                <li>&#10003; Lifetime Access</li>
+                <li>&#10003; Setup Support</li>
+                <li>&#10003; Instant Download</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- DEMO VIDEO -->
   <section id="demo">
     <div class="wrap sec-head reveal">
@@ -2140,8 +2187,8 @@ loading="lazy">
         <video id="demoVideo" controls preload="none"
           src="https://riyanshdigitalhub.com/wp-content/uploads/2024/12/0904-1.mp4"></video>
       </div>
-      <div class="section-cta"><a href="#checkout"
-          class="btn">Continue to Checkout</a></div>
+        <div class="section-cta"><a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Continue to Checkout</a></div>
     </div>
   </section>
 
@@ -2218,8 +2265,8 @@ loading="lazy">
     </div>
 
     <div class="section-cta reveal">
-      <a href="#checkout"
-      class="btn">
+      <a href="https://riyanshdigitalhub.com/?buy_now=1"
+      class="btn" onclick="trackInitiateCheckout()">
       View Pricing
       </a>
     </div>
@@ -2369,8 +2416,8 @@ Everything you need is already included.
         <video id="demoVideo2" controls preload="none"
           src="https://riyanshdigitalhub.com/wp-content/uploads/2024/12/0904-1-1.mp4"></video>
       </div>
-      <div class="section-cta"><a href="#checkout"
-          class="btn">Get Instant Access</a></div>
+        <div class="section-cta"><a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Get Instant Access</a></div>
     </div>
   </section>
 
@@ -2521,8 +2568,8 @@ Everything you need is already included.
     </div>
 
     <div class="section-cta reveal">
-      <a href="#checkout"
-      class="btn">
+      <a href="https://riyanshdigitalhub.com/?buy_now=1"
+      class="btn" onclick="trackInitiateCheckout()">
       Get Instant Access
       </a>
     </div>
@@ -2569,8 +2616,8 @@ Everything you need is already included.
           </div>
         </div>
       </div>
-      <div class="section-cta reveal"><a href="#checkout"
-          class="btn">Start Today</a></div>
+        <div class="section-cta reveal"><a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Start Today</a></div>
     </div>
   </section>
 
@@ -2580,8 +2627,8 @@ Everything you need is already included.
       <div class="mid-cta">
         <h2>Ready to Launch Your Digital Business Today?</h2>
         <p>Get instant access to the complete ReadyMade Website Business Kit and start selling today.</p>
-        <a href="#checkout"
-          class="btn on-dark">Get Instant Access &mdash; &#8377;2,999</a>
+        <a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn on-dark" onclick="trackInitiateCheckout()">Get Instant Access</a>
       </div>
   </section>
 
@@ -2627,8 +2674,8 @@ Everything you need is already included.
         </div>
       </div>
       <div class="section-cta reveal">
-        <a href="#checkout"
-          class="btn">Get Instant Access</a>
+        <a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Get Instant Access</a>
         <div style="margin-top:14px;">
           <a href="#demo" class="btn ghost small">View Site Demo</a>
         </div>
@@ -2689,12 +2736,12 @@ Everything you need is already included.
 
     </div>
 
-    <div class="section-cta reveal">
-      <a href="#checkout"
-        class="btn">
+      <div class="section-cta reveal">
+        <a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">
         Get Instant Access
-      </a>
-    </div>
+        </a>
+      </div>
 
   </div>
 </section>
@@ -2762,8 +2809,8 @@ Everything you need is already included.
           </div>
         </div>
       </div>
-      <div class="section-cta reveal"><a href="#checkout"
-          class="btn">Get Instant Access</a></div>
+        <div class="section-cta reveal"><a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Get Instant Access</a></div>
     </div>
   </section>
 
@@ -2864,8 +2911,8 @@ Everything you need is already included.
       </div>
       <div class="wa-dots" id="waDots"></div>
     </div>
-    <div class="section-cta reveal"><a href="#checkout"
-        class="btn">Get Instant Access</a></div>
+    <div class="section-cta reveal"><a href="https://riyanshdigitalhub.com/?buy_now=1"
+      class="btn" onclick="trackInitiateCheckout()">Get Instant Access</a></div>
   </section>
 
   <!-- LIGHTBOX -->
@@ -2885,7 +2932,8 @@ Everything you need is already included.
       </div>
       <div class="price-card reveal">
         <span class="was">&#8377;50,000+ to build this from scratch</span>
-        <div class="big">&#8377;2,999</div>
+        <div class="big">&#8377;2,199</div>
+        <p style="margin-top:8px;margin-bottom:0;">Original price: &#8377;2,999 — &#8377;800 OFF with code RAKSHA800 — Final payable: &#8377;2,199</p>
         <p style="color:var(--ink-soft);font-size:16px;margin-top:4px;">One-time payment &middot; instant access</p>
         <ul>
           <li>&#9854;&#65039; Lifetime access</li>
@@ -2896,8 +2944,8 @@ Everything you need is already included.
         </ul>
         <p class="checkout-note">
 
-       <a href="#checkout"
-          class="btn" style="width:100%;">Get Instant Access &mdash; &#8377;2,999</a>
+        <a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" style="width:100%;" onclick="trackInitiateCheckout()">Get Instant Access</a>
         <div class="trust-final">
   <span>&#128274; Secure payment</span>
 <span>&#9889; Instant access</span>
@@ -2907,82 +2955,6 @@ Everything you need is already included.
       </div>
     </div>
   </section>
-<!-- EMBEDDED CHECKOUT PREVIEW -->
-
-<section id="checkout" class="checkout-preview reveal">
-
-<div class="wrap">
-
-<div class="checkout-card">
-
-<div class="checkout-image">
-
-<img src="assets/images/product image rmw 2026.png"
-     alt="ReadyMade Website Business Kit">
-
-</div>
-
-<div class="checkout-info">
-
-<span class="checkout-tag">
-Instant Digital Access
-</span>
-
-<h2>
-ReadyMade Website Business Kit
-</h2>
-<div class="offer-badge">
-    &#128293; LIMITED OFFER  67% OFF
-</div>
-<p class="checkout-price">
-    <span class="old-price">INR 8,999</span><br>
-    <span class="new-price">INR 2,999</span>
-</p>
-
-<ul class="checkout-list">
-
-<li><i class="fa-solid fa-circle-check"></i>&#9889; Instant Download</li>
-
-<li><i class="fa-solid fa-circle-check"></i>&#9854;&#65039; Lifetime Access</li>
-
-<li><i class="fa-solid fa-circle-check"></i>&#128188; Commercial Rights Included</li>
-
-<li><i class="fa-solid fa-circle-check"></i>&#10024; Beginner Friendly</li>
-
-<li><i class="fa-solid fa-circle-check"></i>&#128274; 100% Secure Razorpay Payment</li>
-
-</ul>
-
-<a
-    href="https://riyanshdigitalhub.com/?buy_now=1"
-    class="btn checkout-btn"
-    onclick="fbq('track','InitiateCheckout',{
-  content_name:'ReadyMade Website Business Kit',
-  content_ids:['rmw-pro-plan'],
-  content_type:'product',
-  currency:'INR',
-  value:2999,
-  num_items:1,
-  contents:[{id:'rmw-pro-plan',quantity:1}]
-},{
-  eventID:'rmw_ic_'+Date.now()+'_'+Math.random().toString(36).substr(2,9)
-})">
-
-    <span><i class="fa-solid fa-bolt"></i>&#128274; Proceed to Secure Checkout</span>
-</a>
-
-<div class="checkout-trust">
-&#128274;Secure Payment      &#128640;Instant Download 
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
   <!-- TRUSTED BY -->
 <section>
 
@@ -3192,8 +3164,8 @@ ReadyMade Website Business Kit
       <div class="final-cta">
         <h2>Ready to launch your digital business?</h2>
         <p>Join entrepreneurs already running their store &mdash; start today for &#8377;2,999.</p>
-        <a href="#checkout"
-          class="btn">Get Instant Access &mdash; &#8377;2,999</a>
+        <a href="https://riyanshdigitalhub.com/?buy_now=1"
+          class="btn" onclick="trackInitiateCheckout()">Get Instant Access</a>
         <div class="trust-mini">
     <span>&#128274; Secure Payment</span>
 <span>&#9889; Instant Access</span>
@@ -3234,13 +3206,33 @@ ReadyMade Website Business Kit
 
   <div class="sticky-cta">
     <a href="https://riyanshdigitalhub.com/?buy_now=1"
-      onclick="fbq('track','InitiateCheckout',{content_name:'ReadyMade Website Business Kit',content_ids:['rmw-pro-plan'],content_type:'product',currency:'INR',value:2999,num_items:1,contents:[{id:'rmw-pro-plan',quantity:1}]},{eventID:window._icEvId||'ic_'+Date.now()})"
-      class="btn">Get Instant Access &ndash; &#8377;2999</a>
+      onclick="trackInitiateCheckout()"
+      class="btn">Get Instant Access</a>
   </div>
 
   <script>
     function playVideo() { const f = document.getElementById('videoFrame'), v = document.getElementById('demoVideo'); f.querySelector('img').style.display = 'none'; f.querySelector('.play').style.display = 'none'; v.style.display = 'block'; v.play(); }
     function playVideo2() { const f = document.getElementById('videoFrame2'), v = document.getElementById('demoVideo2'); f.querySelector('img').style.display = 'none'; f.querySelector('.play').style.display = 'none'; v.style.display = 'block'; v.play(); }
+
+    // Shared InitiateCheckout tracker
+    function trackInitiateCheckout() {
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'ReadyMade Website Business Kit',
+            content_ids: ['rmw-pro-plan'],
+            content_type: 'product',
+            currency: 'INR',
+            value: 2999,
+            num_items: 1,
+            contents: [{ id: 'rmw-pro-plan', quantity: 1 }]
+          }, { eventID: window._icEvId });
+        }
+      } catch (e) {
+        // fail silently
+      }
+    }
+
     document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', toggleFaq); q.addEventListener('keypress', e => { if (e.key === 'Enter') toggleFaq.call(q); }); });
     function toggleFaq() { const item = this.parentElement, a = item.querySelector('.faq-a'), isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; i.querySelector('.faq-q').setAttribute('aria-expanded', 'false'); }); if (!isOpen) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; this.setAttribute('aria-expanded', 'true'); } }
     window.addEventListener('load', () => { const first = document.querySelector('.faq-item.open .faq-a'); if (first) first.style.maxHeight = first.scrollHeight + 'px'; });
